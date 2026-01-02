@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Best in the West Driving School — Demo</title>
 
-  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
@@ -18,11 +17,20 @@
     }
     .section { padding: 70px 0; }
     .badge-soft { background: rgba(13,110,253,.12); color: #0d6efd; }
-    .star { color: #f59f00; }
     .card-shadow { box-shadow: 0 10px 24px rgba(0,0,0,.08); }
     .mini { font-size: .9rem; color: #6c757d; }
-    .admin-table-wrap { max-height: 420px; overflow: auto; }
-    .nav-link { cursor: pointer; }
+    .admin-table-wrap { max-height: 360px; overflow: auto; }
+
+    .star-btn {
+      font-size: 1.6rem;
+      background: transparent;
+      border: 0;
+      padding: 0 .15rem;
+      line-height: 1;
+      cursor: pointer;
+    }
+    .star-btn.active { filter: drop-shadow(0 0 2px rgba(0,0,0,.2)); }
+    .stars-wrap { user-select: none; }
   </style>
 </head>
 
@@ -41,7 +49,7 @@
         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
         <li class="nav-item"><a class="nav-link" href="#success">Driving Success</a></li>
-        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#review">Leave Review</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
 
@@ -73,9 +81,9 @@
           <a class="btn btn-outline-light btn-lg" href="#services">View Services</a>
         </div>
         <div class="mt-4 d-flex flex-wrap gap-3 mini">
-          <div>⭐ 4.9+ rating (sample)</div>
-          <div>✅ Dual-control training car (sample)</div>
-          <div>📍 Western suburbs coverage (sample)</div>
+          <div>⭐ 4.9+ rating (demo)</div>
+          <div>✅ Dual-control training car (demo)</div>
+          <div>📍 Western suburbs coverage (demo)</div>
         </div>
       </div>
 
@@ -191,11 +199,6 @@
           <div class="card-body">
             <h5 class="card-title fw-bold">Learner Lessons</h5>
             <p class="card-text text-secondary">Start strong with safe habits & controls.</p>
-            <ul class="mini mb-0">
-              <li>Basics + confidence</li>
-              <li>Local routes</li>
-              <li>Parking practice</li>
-            </ul>
           </div>
         </div>
       </div>
@@ -204,11 +207,6 @@
           <div class="card-body">
             <h5 class="card-title fw-bold">Test Preparation</h5>
             <p class="card-text text-secondary">Mock tests + common mistakes fixing.</p>
-            <ul class="mini mb-0">
-              <li>Test routes</li>
-              <li>Mock assessment</li>
-              <li>Final polish</li>
-            </ul>
           </div>
         </div>
       </div>
@@ -217,11 +215,6 @@
           <div class="card-body">
             <h5 class="card-title fw-bold">Overseas Conversion</h5>
             <p class="card-text text-secondary">Adapt to local rules & driving style.</p>
-            <ul class="mini mb-0">
-              <li>Rule refresh</li>
-              <li>Local habits</li>
-              <li>Confidence</li>
-            </ul>
           </div>
         </div>
       </div>
@@ -230,11 +223,6 @@
           <div class="card-body">
             <h5 class="card-title fw-bold">Refresher Lessons</h5>
             <p class="card-text text-secondary">For nervous drivers or after a long break.</p>
-            <ul class="mini mb-0">
-              <li>Highway practice</li>
-              <li>Parking mastery</li>
-              <li>Defensive driving</li>
-            </ul>
           </div>
         </div>
       </div>
@@ -243,7 +231,7 @@
   </div>
 </section>
 
-<!-- Driving Success -->
+<!-- Driving Success + Testimonials (dynamic) -->
 <section id="success" class="section">
   <div class="container">
     <div class="row g-4">
@@ -264,44 +252,16 @@
       </div>
 
       <div class="col-lg-6">
-        <h3 class="fw-bold">Testimonials</h3>
-        <div class="row g-3">
-          <div class="col-md-6">
-            <div class="p-3 border rounded-4 h-100">
-              <div class="fw-semibold">“Passed first go!”</div>
-              <div class="mini">⭐⭐⭐⭐⭐</div>
-              <div class="text-secondary mt-2 mini">
-                Very calm coaching, helped me with merging and parking.
-              </div>
-            </div>
+        <div class="d-flex justify-content-between align-items-end mb-2">
+          <div>
+            <h3 class="fw-bold mb-0">Testimonials</h3>
+            <div class="mini text-secondary">Real reviews appear here after customers submit feedback.</div>
           </div>
-          <div class="col-md-6">
-            <div class="p-3 border rounded-4 h-100">
-              <div class="fw-semibold">“Super patient instructor”</div>
-              <div class="mini">⭐⭐⭐⭐⭐</div>
-              <div class="text-secondary mt-2 mini">
-                I was nervous but gained confidence quickly.
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="p-3 border rounded-4 h-100">
-              <div class="fw-semibold">“Great test prep”</div>
-              <div class="mini">⭐⭐⭐⭐⭐</div>
-              <div class="text-secondary mt-2 mini">
-                Mock tests highlighted my mistakes and fixed them.
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="p-3 border rounded-4 h-100">
-              <div class="fw-semibold">“Overseas conversion help”</div>
-              <div class="mini">⭐⭐⭐⭐⭐</div>
-              <div class="text-secondary mt-2 mini">
-                Learned local rules and got comfortable driving here.
-              </div>
-            </div>
-          </div>
+          <a class="btn btn-outline-primary btn-sm" href="#review">Leave Review</a>
+        </div>
+
+        <div id="testimonialsRow" class="row g-3">
+          <!-- filled by JS -->
         </div>
       </div>
 
@@ -309,52 +269,66 @@
   </div>
 </section>
 
-<!-- FAQ -->
-<section id="faq" class="section bg-light">
+<!-- Leave Review -->
+<section id="review" class="section bg-light">
   <div class="container">
-    <h2 class="fw-bold mb-3">FAQ</h2>
+    <div class="row g-4 align-items-start">
+      <div class="col-lg-6">
+        <h2 class="fw-bold">Leave a Review</h2>
+        <p class="text-secondary">
+          After your lesson, you’ll receive a <b>Service ID</b>. Enter it below to leave your rating and testimony.
+        </p>
 
-    <div class="accordion" id="faqAcc">
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
-            How do bookings work?
-          </button>
-        </h2>
-        <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc">
-          <div class="accordion-body">
-            You request a slot, then we confirm by phone/email. (This MVP stores requests locally.)
-          </div>
+        <div class="p-4 bg-white border rounded-4 card-shadow">
+          <form id="reviewForm" novalidate>
+            <div class="mb-3">
+              <label class="form-label">Service ID</label>
+              <input type="text" class="form-control" name="service_id" placeholder="e.g., BW-100012" required>
+              <div class="invalid-feedback">Service ID is required.</div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Your Rating</label>
+              <div class="stars-wrap" id="stars">
+                <button type="button" class="star-btn" data-value="1">⭐</button>
+                <button type="button" class="star-btn" data-value="2">⭐</button>
+                <button type="button" class="star-btn" data-value="3">⭐</button>
+                <button type="button" class="star-btn" data-value="4">⭐</button>
+                <button type="button" class="star-btn" data-value="5">⭐</button>
+                <span class="mini ms-2" id="ratingLabel">0/5</span>
+              </div> 
+              <input type="hidden" name="rating" id="ratingInput" required>
+              <div class="invalid-feedback d-block" id="ratingError" style="display:none;">Rating is required.</div>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Testimony</label>
+              <textarea class="form-control" name="testimony" rows="4" placeholder="Share your experience..." required></textarea>
+              <div class="invalid-feedback">Please write your testimony.</div>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Submit Review</button>
+            <div id="reviewMsg" class="small mt-2"></div>
+          </form>
         </div>
       </div>
 
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
-            Can I cancel or reschedule?
-          </button>
-        </h2>
-        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
-          <div class="accordion-body">
-            Yes. Add your real cancellation policy text here.
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3">
-            Do you help with test preparation?
-          </button>
-        </h2>
-        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAcc">
-          <div class="accordion-body">
-            Yes — mock tests, route practice, and targeted skill improvement.
+      <div class="col-lg-6">
+        <div class="p-4 border rounded-4 bg-white">
+          <div class="fw-semibold mb-2">How it works</div>
+          <ol class="mb-0">
+            <li>You book a lesson.</li>
+            <li>When the service is completed, we give you a <b>Service ID</b>.</li>
+            <li>You enter the Service ID here and leave your rating.</li>
+            <li>Your review appears in Testimonials (after validation).</li>
+          </ol>
+          <hr>
+          <div class="mini text-secondary">
+            MVP note: This stores data in the browser (localStorage). For real business use, connect to a backend + DB.
           </div>
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -364,10 +338,7 @@
     <div class="row g-4">
       <div class="col-lg-6">
         <h2 class="fw-bold">Contact</h2>
-        <p class="text-secondary">
-          Call, email, or send a message. We’ll get back quickly.
-        </p>
-
+        <p class="text-secondary">Call, email, or send a message. We’ll get back quickly.</p>
         <div class="p-4 border rounded-4">
           <div class="mb-2"><span class="fw-semibold">Phone:</span> <a href="tel:+61000000000">+61 000 000 000</a></div>
           <div class="mb-2"><span class="fw-semibold">Email:</span> <a href="mailto:hello@example.com">hello@example.com</a></div>
@@ -409,7 +380,7 @@
     <div class="mini">© <span id="year"></span> Best in the West Driving School — Demo</div>
     <div class="mini">
       <a class="text-decoration-none me-3" href="#home">Top</a>
-      <a class="text-decoration-none" href="#" data-bs-toggle="modal" data-bs-target="#bookingModal">Book</a>
+      <a class="text-decoration-none" href="#review">Review</a>
     </div>
   </div>
 </footer>
@@ -485,9 +456,8 @@
         </form>
 
         <hr class="my-4">
-
         <div class="mini text-secondary">
-          MVP note: Bookings are stored in the browser’s localStorage. For real use, connect this form to a server/email/SMS.
+          Demo note: After completing the service, a Service ID is used to submit feedback.
         </div>
       </div>
     </div>
@@ -497,67 +467,78 @@
 <!-- Admin Offcanvas -->
 <div class="offcanvas offcanvas-end" tabindex="-1" id="adminPanel">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title fw-bold">Admin — Booking Requests</h5>
+    <h5 class="offcanvas-title fw-bold">Admin — Bookings & Reviews</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
   </div>
   <div class="offcanvas-body">
 
     <div class="d-flex gap-2 mb-3">
       <button id="refreshAdmin" class="btn btn-outline-primary btn-sm">Refresh</button>
-      <button id="clearBookings" class="btn btn-outline-danger btn-sm">Clear</button>
-      <button id="exportBookings" class="btn btn-outline-secondary btn-sm">Export JSON</button>
+      <button id="clearAll" class="btn btn-outline-danger btn-sm">Clear All</button>
+      <button id="exportAll" class="btn btn-outline-secondary btn-sm">Export JSON</button>
     </div>
 
-    <div class="admin-table-wrap">
+    <div class="fw-semibold mb-2">Bookings</div>
+    <div class="admin-table-wrap mb-4">
       <table class="table table-sm align-middle">
         <thead class="table-light position-sticky top-0">
           <tr>
+            <th>Service ID</th>
             <th>Date/Time</th>
             <th>Name</th>
-            <th>Phone</th>
             <th>Service</th>
           </tr>
         </thead>
-        <tbody id="adminRows">
+        <tbody id="adminBookingsRows">
           <tr><td colspan="4" class="text-secondary mini">No bookings yet.</td></tr>
         </tbody>
       </table>
     </div>
 
+    <div class="fw-semibold mb-2">Reviews</div>
+    <div class="admin-table-wrap">
+      <table class="table table-sm align-middle">
+        <thead class="table-light position-sticky top-0">
+          <tr>
+            <th>Service ID</th>
+            <th>Rating</th>
+            <th>Testimony</th>
+          </tr>
+        </thead>
+        <tbody id="adminReviewsRows">
+          <tr><td colspan="3" class="text-secondary mini">No reviews yet.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
     <div class="mini text-secondary mt-3">
-      This is a lightweight admin view for demo/testing. A real version would use a backend + authentication.
+      MVP: All data stored in localStorage.
     </div>
   </div>
 </div>
 
-<!-- jQuery + Bootstrap JS -->
+<!-- JS -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-  // ---------- Utilities ----------
-  const STORAGE_KEY = "drivingSchoolBookings_v1";
+  // ---------- Storage Keys ----------
+  const STORAGE_BOOKINGS = "drivingSchoolBookings_v2";
+  const STORAGE_REVIEWS  = "drivingSchoolReviews_v1";
 
-  function getBookings() {
-    try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]"); }
-    catch { return []; }
+  // ---------- Helpers ----------
+  function escapeHtml(str) {
+    return String(str).replace(/[&<>"']/g, s => ({
+      "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
+    }[s]));
   }
 
-  function saveBookings(bookings) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(bookings));
-  }
-
-  function addBooking(b) {
-    const bookings = getBookings();
-    bookings.unshift(b); // latest first
-    saveBookings(bookings);
-  }
-
-  function toBookingObject(formEl) {
-    const data = {};
-    $(formEl).serializeArray().forEach(({name, value}) => data[name] = value.trim());
-    data.createdAt = new Date().toISOString();
-    return data;
+  function validateForm(formEl) {
+    if (!formEl.checkValidity()) {
+      $(formEl).addClass("was-validated");
+      return false;
+    }
+    return true;
   }
 
   function setMsg($el, text, ok) {
@@ -565,117 +546,250 @@
       .addClass(ok ? "text-success" : "text-danger");
   }
 
-  function validateForm(formEl) {
-    // Bootstrap validation style
-    const form = formEl;
-    if (!form.checkValidity()) {
-      $(form).addClass("was-validated");
-      return false;
-    }
-    return true;
+  function getJson(key) {
+    try { return JSON.parse(localStorage.getItem(key) || "[]"); }
+    catch { return []; }
+  }
+  function setJson(key, val) {
+    localStorage.setItem(key, JSON.stringify(val));
   }
 
-  function renderAdmin() {
-    const rows = getBookings();
-    const $tbody = $("#adminRows");
+  // Generate a simple unique Service ID (demo)
+  function generateServiceId() {
+    const n = Math.floor(100000 + Math.random() * 900000);
+    return `BW-${n}`;
+  }
 
-    if (!rows.length) {
-      $tbody.html('<tr><td colspan="4" class="text-secondary mini">No bookings yet.</td></tr>');
+  function toObject(formEl) {
+    const data = {};
+    $(formEl).serializeArray().forEach(({name, value}) => data[name] = value.trim());
+    return data;
+  }
+
+  // ---------- Render ----------
+  function renderTestimonials() {
+    const reviews = getJson(STORAGE_REVIEWS);
+    const $row = $("#testimonialsRow");
+
+    if (!reviews.length) {
+      $row.html(`
+        <div class="col-12">
+          <div class="p-3 border rounded-4">
+            <div class="fw-semibold">No reviews yet</div>
+            <div class="mini text-secondary">Be the first to leave a review after your lesson.</div>
+          </div>
+        </div>
+      `);
       return;
     }
 
-    const html = rows.map(b => {
-      const dt = `${b.date || ""} ${b.time || ""}`.trim();
-      return `
+    // show latest 4
+    const top = reviews.slice(0, 4);
+    const html = top.map(r => `
+      <div class="col-md-6">
+        <div class="p-3 border rounded-4 h-100">
+          <div class="d-flex justify-content-between">
+            <div class="fw-semibold">${escapeHtml(r.customer_name || "Customer")}</div>
+            <div class="mini">${"⭐".repeat(r.rating || 0)}${"☆".repeat(5-(r.rating||0))}</div>
+          </div>
+          <div class="mini text-secondary">Service ID: ${escapeHtml(r.service_id)}</div>
+          <div class="text-secondary mt-2 mini">${escapeHtml(r.testimony)}</div>
+        </div>
+      </div>
+    `).join("");
+
+    $row.html(html);
+  }
+
+  function renderAdmin() {
+    const bookings = getJson(STORAGE_BOOKINGS);
+    const reviews  = getJson(STORAGE_REVIEWS);
+
+    const $b = $("#adminBookingsRows");
+    const $r = $("#adminReviewsRows");
+
+    if (!bookings.length) {
+      $b.html('<tr><td colspan="4" class="text-secondary mini">No bookings yet.</td></tr>');
+    } else {
+      $b.html(bookings.map(b => `
         <tr>
-          <td class="mini">${escapeHtml(dt)}<div class="text-secondary mini">${escapeHtml(b.createdAt || "")}</div></td>
+          <td class="mini fw-semibold">${escapeHtml(b.service_id)}</td>
+          <td class="mini">${escapeHtml((b.date||"") + " " + (b.time||""))}</td>
           <td>${escapeHtml(b.name || "")}</td>
-          <td class="mini">${escapeHtml(b.phone || "")}</td>
           <td class="mini">${escapeHtml(b.service || "")}</td>
         </tr>
-      `;
-    }).join("");
+      `).join(""));
+    }
 
-    $tbody.html(html);
+    if (!reviews.length) {
+      $r.html('<tr><td colspan="3" class="text-secondary mini">No reviews yet.</td></tr>');
+    } else {
+      $r.html(reviews.map(rv => `
+        <tr>
+          <td class="mini fw-semibold">${escapeHtml(rv.service_id)}</td>
+          <td class="mini">${"⭐".repeat(rv.rating || 0)}</td>
+          <td class="mini">${escapeHtml(rv.testimony)}</td>
+        </tr>
+      `).join(""));
+    }
   }
 
-  function escapeHtml(str) {
-    return String(str).replace(/[&<>"']/g, s => ({
-      "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
-    }[s]));
+  // ---------- Star Rating UI ----------
+  function setStars(val) {
+    $("#ratingInput").val(val);
+    $("#ratingLabel").text(`${val}/5`);
+    $("#ratingError").hide();
+
+    $("#stars .star-btn").each(function(){
+      const v = Number($(this).data("value"));
+      $(this).toggleClass("active", v <= val);
+      $(this).css("opacity", v <= val ? "1" : ".4");
+    });
   }
 
-  // ---------- Handlers ----------
+  // ---------- Init ----------
   $(function(){
     $("#year").text(new Date().getFullYear());
+    renderTestimonials();
+    renderAdmin();
 
-    // Quick booking form (hero card)
+    // Stars click
+    $("#stars .star-btn").on("click", function(){
+      setStars(Number($(this).data("value")));
+    });
+
+    // Quick booking (stores only)
     $("#quickBookingForm").on("submit", function(e){
       e.preventDefault();
       if (!validateForm(this)) return;
 
-      const booking = toBookingObject(this);
-      addBooking(booking);
+      const booking = toObject(this);
+      booking.createdAt = new Date().toISOString();
+      booking.service_id = generateServiceId();
+      booking.status = "Booked";
 
-      setMsg($("#quickBookingMsg"), "Booking request saved. We’ll contact you to confirm.", true);
+      const bookings = getJson(STORAGE_BOOKINGS);
+      bookings.unshift(booking);
+      setJson(STORAGE_BOOKINGS, bookings);
+
+      setMsg($("#quickBookingMsg"),
+        `Request saved ✅ Your Service ID (demo) is ${booking.service_id}.`,
+        true
+      );
+
       this.reset();
       $(this).removeClass("was-validated");
 
       renderAdmin();
     });
 
-    // Booking modal form
+    // Booking modal (stores + shows Service ID)
     $("#bookingForm").on("submit", function(e){
       e.preventDefault();
       if (!validateForm(this)) return;
 
-      const booking = toBookingObject(this);
-      addBooking(booking);
+      const booking = toObject(this);
+      booking.createdAt = new Date().toISOString();
+      booking.service_id = generateServiceId();
+      booking.status = "Booked";
 
-      setMsg($("#bookingMsg"), "Booking request saved! We’ll confirm shortly.", true);
-      this.reset();
-      $(this).removeClass("was-validated");
+      const bookings = getJson(STORAGE_BOOKINGS);
+      bookings.unshift(booking);
+      setJson(STORAGE_BOOKINGS, bookings);
+
+      setMsg($("#bookingMsg"),
+        `Booking saved ✅ Your Service ID (demo) is ${booking.service_id}. Use it later to leave a review.`,
+        true
+      );
 
       renderAdmin();
 
-      // close modal after short delay
-      setTimeout(() => {
-        const modalEl = document.getElementById("bookingModal");
-        bootstrap.Modal.getInstance(modalEl)?.hide();
-      }, 700);
+      this.reset();
+      $(this).removeClass("was-validated");
     });
 
-    // Contact form (demo only)
-    $("#contactForm").on("submit", function(e){
+    // Review submit
+    $("#reviewForm").on("submit", function(e){
       e.preventDefault();
+
+      // manual rating validation
+      const rating = Number($("#ratingInput").val() || 0);
+      if (!rating) {
+        $("#ratingError").css("display", "block");
+        setMsg($("#reviewMsg"), "Please select a rating.", false);
+        return;
+      }
+
       if (!validateForm(this)) return;
 
-      setMsg($("#contactMsg"), "Message sent (demo). Hook this to email/API in production.", true);
+      const payload = toObject(this);
+      payload.rating = rating;
+      payload.createdAt = new Date().toISOString();
+
+      const serviceId = (payload.service_id || "").trim().toUpperCase();
+      payload.service_id = serviceId;
+
+      const bookings = getJson(STORAGE_BOOKINGS);
+      const booking = bookings.find(b => (b.service_id || "").toUpperCase() === serviceId);
+
+      if (!booking) {
+        setMsg($("#reviewMsg"), "Invalid Service ID. Please check your Service ID and try again.", false);
+        return;
+      }
+
+      const reviews = getJson(STORAGE_REVIEWS);
+
+      // prevent duplicate review for same service id
+      if (reviews.some(r => (r.service_id || "").toUpperCase() === serviceId)) {
+        setMsg($("#reviewMsg"), "A review is already submitted for this Service ID.", false);
+        return;
+      }
+
+      // attach customer name (optional)
+      payload.customer_name = booking.name || "Customer";
+
+      reviews.unshift(payload);
+      setJson(STORAGE_REVIEWS, reviews);
+
+      setMsg($("#reviewMsg"), "Thank you! Your review was submitted successfully.", true);
+
       this.reset();
       $(this).removeClass("was-validated");
-    });
+      setStars(0);
 
-    // Admin buttons
-    $("#refreshAdmin").on("click", renderAdmin);
-
-    $("#clearBookings").on("click", function(){
-      localStorage.removeItem(STORAGE_KEY);
+      renderTestimonials();
       renderAdmin();
     });
 
-    $("#exportBookings").on("click", function(){
-      const data = JSON.stringify(getBookings(), null, 2);
-      const blob = new Blob([data], {type: "application/json"});
+    // Admin actions
+    $("#refreshAdmin").on("click", function(){
+      renderAdmin();
+      renderTestimonials();
+    });
+
+    $("#clearAll").on("click", function(){
+      localStorage.removeItem(STORAGE_BOOKINGS);
+      localStorage.removeItem(STORAGE_REVIEWS);
+      renderAdmin();
+      renderTestimonials();
+    });
+
+    $("#exportAll").on("click", function(){
+      const data = {
+        bookings: getJson(STORAGE_BOOKINGS),
+        reviews:  getJson(STORAGE_REVIEWS)
+      };
+      const blob = new Blob([JSON.stringify(data, null, 2)], {type:"application/json"});
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = "bookings.json";
+      a.download = "site-data.json";
       a.click();
       URL.revokeObjectURL(url);
     });
 
-    // Initial render
-    renderAdmin();
+    // default stars
+    setStars(0);
   });
 </script>
 
